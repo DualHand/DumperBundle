@@ -1,0 +1,4 @@
+services:
+#    dual_hand_dumper.example:
+#        class: DualHand\DumperBundle\Example
+#        arguments: ["@service_id", "plain_value", %parameter%]

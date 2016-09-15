@@ -1,0 +1,3 @@
+dual_hand_dumper_homepage:
+    path:     /
+    defaults: { _controller: DualHandDumperBundle:Default:index }
