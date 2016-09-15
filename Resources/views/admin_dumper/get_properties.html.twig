@@ -1,0 +1,10 @@
+{% spaceless %}
+<pre style="background-color: #0a001f">
+    <span style="color: gainsboro">class: </span><span style="color: #00A6C7">{{ objectClass }}</span><br>
+    <div>
+        {% for property in properties %}
+            <span style="color: gainsboro">    - "</span><span style="color: greenyellow">{{ property }}</span><span style="color: gainsboro">"</span><br>
+        {% endfor %}
+    </div>
+</pre>
+{% endspaceless %}
