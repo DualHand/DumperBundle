@@ -20,7 +20,7 @@ class PropertiesInAdminExtension extends \Twig_Extension
     public function getFunctions()
     {
         return array(
-            new \Twig_SimpleFunction('prop', array($this, 'get_properties'), array('is_safe' => array('html')),
+            new \Twig_SimpleFunction('prop', array($this, 'getProperties'), array('is_safe' => array('html')),
                 array('needs_environment' => true)),
         );
     }
@@ -30,15 +30,13 @@ class PropertiesInAdminExtension extends \Twig_Extension
         $this->environment = $environment;
     }
 
-    public function get_properties($object)
+    public function getProperties($object)
     {
         $properties = array();
 
-        $pool = $this->getPool();
-
         $objectClass = get_class($object);
 
-        $admin = $pool->getAdminByClass($objectClass);
+        $admin = $this->pool->getAdminByClass($objectClass);
 
         if (null === $admin) {
             return;
