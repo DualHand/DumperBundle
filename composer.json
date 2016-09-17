@@ -1,5 +1,5 @@
 {
-    "name" : "dualhand/dumperbundle",
+    "name" : "dualhand/dumper-bundle",
     "description" : "A dumper bundle",
     "type" : "symfony-bundle",
     "authors" : [{
@@ -16,11 +16,9 @@
         "sonata-project/admin-bundle": "2.3.*"
     },
     "autoload" : {
-        "psr-0" : {
-            "DualHand\\DumperBundle" : ""
-        }
+        "psr-0" : { "DualHand\\DumperBundle" : "" },
+        "psr-4": { "DualHand\\DumperBundle\\": "" }
     },
-    "target-dir" : "DualHand/DumperBundle",
     "repositories" : [{
             "type": "vcs",
             "url":  "git@github.com:DualHand/DumperBundle.git"
