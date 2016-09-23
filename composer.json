@@ -23,5 +23,6 @@
             "type": "vcs",
             "url":  "git@github.com:DualHand/DumperBundle.git"
 
-    }]
+    }],
+    "minimum-stability": "dev"
 }
