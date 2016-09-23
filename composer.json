@@ -24,6 +24,9 @@
             "url":  "git@github.com:DualHand/DumperBundle.git"
 
     }],
-    "minimum-stability": "dev",
-    "version": "0.0.4" 
+    "extra": {
+            "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    } 
 }
