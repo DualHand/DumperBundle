@@ -2,6 +2,7 @@
     "name" : "dualhand/dumper-bundle",
     "description" : "A dumper bundle",
     "type" : "symfony-bundle",
+    "version": "dev-master",
     "authors" : [{
         "name" : "David Velasco",
         "email" : "dvelasco@dualhand.com"
@@ -22,6 +23,6 @@
     "repositories" : [{
             "type": "vcs",
             "url":  "git@github.com:DualHand/DumperBundle.git",
-            "reference": "master"
+            "reference": "master",
     }]
 }
