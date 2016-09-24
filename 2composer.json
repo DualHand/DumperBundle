@@ -30,3 +30,22 @@
         }
     }
 }
+
+
+{
+    "name": "dualhand/dumper-bundle",
+    "description": "A dumper bundle",
+    "type": "symfony-bundle",
+    "require": {
+        "php": ">=5.3.9",
+        "symfony/symfony": "2.8.*",
+        "sonata-project/admin-bundle": "2.3.*"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "David Velasco",
+            "email": "david@dualhand.com"
+        }
+    ]
+}
