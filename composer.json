@@ -21,12 +21,7 @@
     },
     "repositories" : [{
             "type": "vcs",
-            "url":  "git@github.com:DualHand/DumperBundle.git"
-
-    }],
-    "extra" : {
-        "branch-alias" : {
-                "dev-master" : "master-dev"
-            }
-    }
+            "url":  "git@github.com:DualHand/DumperBundle.git",
+            "reference": "master"
+    }]
 }
