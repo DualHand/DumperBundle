@@ -13,5 +13,10 @@
             "name": "David Velasco",
             "email": "david@dualhand.com"
         }
-    ]
+    ],
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.0.x-dev"
+        }
+    }
 }
