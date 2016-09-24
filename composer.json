@@ -23,6 +23,7 @@
     "repositories" : [{
             "type": "vcs",
             "url":  "git@github.com:DualHand/DumperBundle.git",
+            "version": "dev-master",
             "reference": "master"
     }]
 }
