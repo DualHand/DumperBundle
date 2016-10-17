@@ -1,8 +1,9 @@
 services:
     dualhand.dumper.properties_in_admin.twig.extension:
         class: DualHand\DumperBundle\Extensions\Twig\PropertiesInAdminExtension
-        calls:
-            - [setPool, [@sonata.admin.pool]]
-            - [setRequest, [@request_stack]]
+        arguments: [@dualhand.dumper.manager]
         tags:
                - { name: twig.extension }
+    dualhand.dumper.manager:
+        class: DualHand\DumperBundle\Manager\DumperManager
+        arguments: [@sonata.admin.pool, @request_stack]
