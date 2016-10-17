@@ -2,8 +2,6 @@
 
 namespace DualHand\DumperBundle\Extensions\Twig;
 
-use Symfony\Component\HttpFoundation\RequestStack;
-
 /**
  * Shows the admin properties for a given object.
  *
@@ -11,11 +9,19 @@ use Symfony\Component\HttpFoundation\RequestStack;
  */
 class PropertiesInAdminExtension extends \Twig_Extension
 {
-    private $pool;
-
-    private $request;
-
     private $environment;
+
+    private $dumperManager;
+
+    /**
+     * PropertiesInAdminExtension constructor.
+     *
+     * @param $dumperManager
+     */
+    public function __construct($dumperManager)
+    {
+        $this->dumperManager = $dumperManager;
+    }
 
     public function getFunctions()
     {
@@ -32,68 +38,14 @@ class PropertiesInAdminExtension extends \Twig_Extension
 
     public function getProperties($object)
     {
-        $properties = array();
-
         $objectClass = get_class($object);
 
-        $admin = $this->pool->getAdminByClass($objectClass);
-
-        if (null === $admin) {
-            return;
-        }
-
-        $admin->setRequest($this->request);
-
-        foreach ($admin->getFormFieldDescriptions() as $property) {
-            $properties[] = $property->getName();
-        }
+        $properties = $this->dumperManager->getPropertiesFromObjectClass($objectClass);
 
         return $this->environment->render('DualHandDumperBundle:admin_dumper:get_properties.html.twig', array(
             'properties' => $properties,
             'objectClass' => $objectClass,
         ));
-    }
-
-    /**
-     * Getter for request.
-     */
-    public function getRequest()
-    {
-        return $this->request;
-    }
-
-    /**
-     * Setter for request.
-     *
-     * @return PropertiesInAdminExtension
-     */
-    public function setRequest(RequestStack $request)
-    {
-        $this->request = $request->getCurrentRequest();
-
-        return $this;
-    }
-
-    /**
-     * Getter for pool.
-     *
-     * @return mixed
-     */
-    public function getPool()
-    {
-        return $this->pool;
-    }
-
-    /**
-     * Setter for pool.
-     *
-     * @return PropertiesInAdminExtension
-     */
-    public function setPool($pool)
-    {
-        $this->pool = $pool;
-
-        return $this;
     }
 
     /**
