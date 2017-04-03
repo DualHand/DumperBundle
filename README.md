@@ -1,6 +1,7 @@
 # Dualhand Dumper Bundle
 
 *Purpose of this bundle:*
+
 This bundle prints the object's properties that are active in their sonata admin class.
 
 *EXAMPLE:*
@@ -15,7 +16,6 @@ This bundle prints the object's properties that are active in their sonata admin
 
 *INSTALL:*
 ```
-
 composer require dualhand/dumper-bundle
 ```
 *USAGE:*
@@ -25,4 +25,6 @@ just put this in your twig template
 ```{{ prop(object) }}```
 
 
-if you want to report a bug, please do it in <a href="https://github.com/DualHand/DumperBundle">github</a> or mail me <a href="mailto:david@dualhand.com">david@dualhand.com</a>
+if you want to report a bug, please do it in <a href="https://github.com/DualHand/DumperBundle">github</a> or mail me <a href="mailto:david@dualhand.com">david@dualhand.com</a> 
+
+twitter: <a href="https://twitter.com/fodaveg">@fodaveg</a>
