@@ -5,13 +5,13 @@
     "require": {
         "php": ">=5.3.9",
         "symfony/symfony": "2.8.*",
-        "sonata-project/admin-bundle": "2.3.*"
+        "sonata-project/admin-bundle": "^3|^2"
     },
     "license": "MIT",
     "authors": [
         {
             "name": "David Velasco",
-            "email": "david@dualhand.com"
+            "email": "david@dualhand.io"
         }
     ],
     "autoload" : {
